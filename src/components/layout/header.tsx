@@ -37,7 +37,7 @@ export function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Block 1: Logo */}
           <Link href="/" className="flex items-center">
-            <div suppressHydrationWarning>
+            <div suppressHydrationWarning className="min-w-[200px] sm:min-w-[240px] md:min-w-[280px]">
               <Image
                 src="/logo.png"
                 alt="Lifeline Central West"
@@ -50,9 +50,9 @@ export function Header() {
           </Link>
           
           <div className="flex items-center gap-8">
-            {/* Block 2: Empty Space / CTAs when scrolled */}
+            {/* Block 2: Empty Space / CTAs when scrolled - Hidden on mobile where bottom bar shows */}
             <div className={cn(
-              "flex items-center gap-2 transition-all duration-300 min-w-[280px]",
+              "hidden md:flex items-center gap-2 transition-all duration-300 min-w-[280px]",
               isScrolled ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
             )}>
               <Button asChild size="sm" className="bg-lifeline-blue text-white hover:bg-lifeline-blue/90">
