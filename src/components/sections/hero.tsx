@@ -65,7 +65,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[100vh] min-h-[600px] flex items-end md:items-center pb-16 md:pb-0 text-primary-foreground overflow-hidden">
+    <section className="relative h-dvh min-h-[600px] flex items-end md:items-center pb-16 md:pb-0 text-primary-foreground overflow-hidden">
       <div className="absolute inset-0 -z-20 will-change-transform transition-transform" id="hero-bg" suppressHydrationWarning>
         <Image
           src="/hero.webp"

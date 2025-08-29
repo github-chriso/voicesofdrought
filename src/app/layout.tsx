@@ -6,6 +6,9 @@ import { fontBody, fontHeadline } from '@/lib/fonts';
 
 export const viewport = {
   themeColor: '#0B458B',
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
 }
 
 export const metadata: Metadata = {
@@ -58,7 +61,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("scroll-smooth", fontBody.variable, fontHeadline.variable)}>
-      <body className={cn("font-body antialiased", "min-h-screen bg-background font-sans")}>
+      <body className={cn("font-body antialiased", "min-h-dvh bg-background font-sans")}>
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:px-4 focus:py-2 bg-background text-foreground border rounded-md">
           Skip to main content
         </a>

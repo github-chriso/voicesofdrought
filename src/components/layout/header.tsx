@@ -26,18 +26,18 @@ export function Header() {
   }, []);
 
   return (
-    <header className={cn(
-      // Keep the nav pinned and on top across browsers
-      "fixed top-0 left-0 right-0 z-[100] bg-background/80 backdrop-blur-sm supports-[backdrop-filter]:bg-background/70",
-      // Reduce repaint jank on Safari when scrolling with blurred backgrounds
-      "will-change-transform transition-shadow duration-300",
-      isScrolled && "shadow-md"
-    )}>
+          <header className={cn(
+        // Keep the nav pinned and on top across browsers
+        "fixed top-0 left-0 right-0 z-[100] bg-background/80 backdrop-blur-sm supports-[backdrop-filter]:bg-background/70 pt-safe",
+        // Reduce repaint jank on Safari when scrolling with blurred backgrounds
+        "will-change-transform transition-shadow duration-300",
+        isScrolled && "shadow-md"
+      )}>
       <div className="container">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-20 items-center justify-between gap-4">
           {/* Block 1: Logo */}
           <Link href="/" className="flex items-center">
-            <div suppressHydrationWarning className="min-w-[200px] sm:min-w-[240px] md:min-w-[280px]">
+            <div suppressHydrationWarning className="min-w-[200px] sm:min-w-[240px] md:min-w-[240px] lg:min-w-[260px]">
               <Image
                 src="/logo.png"
                 alt="Lifeline Central West"
@@ -49,10 +49,10 @@ export function Header() {
             </div>
           </Link>
           
-          <div className="flex items-center gap-8">
+          <div className="flex items-center gap-4 lg:gap-6 xl:gap-8">
             {/* Block 2: Empty Space / CTAs when scrolled - Hidden on mobile where bottom bar shows */}
             <div className={cn(
-              "hidden md:flex items-center gap-2 transition-all duration-300 min-w-[280px]",
+              "hidden xl:flex items-center gap-2 transition-all duration-300 min-w-[240px]",
               isScrolled ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
             )}>
               <Button asChild size="sm" className="bg-lifeline-blue text-white hover:bg-lifeline-blue/90">

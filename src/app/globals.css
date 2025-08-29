@@ -99,3 +99,33 @@
 .wave-divider .shape-fill {
   fill: #F1A63B;
 }
+
+/* Dynamic viewport height for iOS */
+@supports (height: 100dvh) {
+  .h-dvh { height: 100dvh; }
+  .min-h-dvh { min-height: 100dvh; }
+}
+
+/* Safe area support */
+.pb-safe { 
+  padding-bottom: max(env(safe-area-inset-bottom), 8px); 
+}
+.pt-safe { 
+  padding-top: max(env(safe-area-inset-top), 8px); 
+}
+
+/* Prevent horizontal scroll issues */
+html, body { 
+  max-width: 100%; 
+  overflow-x: hidden; 
+}
+
+/* Better typography on small screens */
+.text-balance { 
+  text-wrap: balance; 
+}
+
+/* Contain transforms to prevent overflow */
+.transform-contain {
+  contain: layout style paint;
+}
