@@ -1,0 +1,6 @@
+Vercel Setup:
+1. Go to: https://vercel.com
+2. Import your GitHub repo: github-chriso/voicesofdrought
+3. Vercel auto-detects Next.js settings
+4. Add custom domain: regionalcommunity.support
+5. Update Cloudflare DNS to point to Vercel

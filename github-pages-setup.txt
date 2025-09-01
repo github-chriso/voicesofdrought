@@ -1,0 +1,10 @@
+GitHub Pages Setup:
+1. In GitHub repo settings: https://github.com/github-chriso/voicesofdrought/settings/pages
+2. Add custom domain: regionalcommunity.support
+3. In Cloudflare DNS settings:
+   - Add CNAME record: @ points to github-chriso.github.io
+   - Or A records pointing to GitHub Pages IPs:
+     185.199.108.153
+     185.199.109.153  
+     185.199.110.153
+     185.199.111.153

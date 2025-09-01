@@ -1,0 +1,8 @@
+1. Go to: https://pages.cloudflare.com
+2. Connect your GitHub repo: github-chriso/voicesofdrought  
+3. Set build settings:
+   - Framework preset: Next.js (Static HTML Export)
+   - Build command: npm run build
+   - Build output directory: out
+4. Deploy!
+5. Add custom domain: regionalcommunity.support
