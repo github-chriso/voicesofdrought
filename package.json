@@ -9,8 +9,8 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "typecheck": "tsc --noEmit",
-    "clean": "rm -rf out .next",
-    "preview": "npm run build && npx serve out",
+    "clean": "rm -rf dist .next",
+    "preview": "npm run build && npx serve dist",
     "quality": "npm run typecheck && npm run lint && npm run build",
     "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
     "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts"

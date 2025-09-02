@@ -4,8 +4,8 @@ const nextConfig: NextConfig = {
   // Produce a fully static site for hosting flexibility
   output: 'export',
   
-  // Use 'out' directory to match Cloudflare Pages expectation
-  distDir: 'out',
+  // Use 'dist' directory for Azure Static Web Apps
+  distDir: 'dist',
   
   // Ensure clean static URLs that map to folder index.html on static hosts
   trailingSlash: true,
