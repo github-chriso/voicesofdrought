@@ -68,7 +68,7 @@ export function Hero() {
     <section className="relative h-dvh min-h-[600px] flex items-end pb-24 md:pb-32 lg:pb-40 text-primary-foreground overflow-hidden">
       <div className="absolute inset-0 -z-20 will-change-transform transition-transform" id="hero-bg" suppressHydrationWarning>
         <Image
-          src="/hero.webp"
+          src="/hero.jpg"
           alt="Voices of Drought hero image featuring Central West NSW landscape with Lifeline Central West branding."
           data-ai-hint="drought landscape with logo"
           fill
