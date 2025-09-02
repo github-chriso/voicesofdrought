@@ -19,11 +19,11 @@ export const siteConfig = {
   locations: [
     {
       lga: "Cowra Shire",
-      towns: ["Cowra (×2)", "Woodstock", "Gooloogong", "Darbys Falls"],
+      towns: ["Cowra (×2)", "Woodstock", "Gooloogong", "Wattamondara"],
     },
     {
       lga: "Blayney Shire",
-      towns: ["Blayney", "Millthorpe", "Carcoar", "Barry", "Lyndhurst"],
+      towns: ["Blayney", "Millthorpe", "Carcoar", "Neville", "Lyndhurst"],
     },
     {
       lga: "Weddin Shire",
@@ -35,7 +35,7 @@ export const siteConfig = {
     },
     {
       lga: "Cabonne Shire",
-      towns: ["Molong", "Canowindra", "Cudal", "Mullion Creek", "Yeoval"],
+      towns: ["Molong", "Canowindra", "Cudal", "Eugowra", "Yeoval"],
     },
   ],
   faqs: [
