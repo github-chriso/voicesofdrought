@@ -70,29 +70,64 @@ npm run dev
 
 ## 📝 Available Scripts
 
-- `npm run dev` - Start development server with Turbopack
-- `npm run build` - Build for production
-- `npm run start` - Start production server  
-- `npm run lint` - Run ESLint
+### Development
+- `npm run dev` - Start development server with Turbopack on port 9002
+- `npm run preview` - Build and preview the production site locally
+
+### Build & Quality
+- `npm run build` - Build static export for production (outputs to `dist/`)
+- `npm run quality` - Run full quality checks (typecheck + lint + build)
 - `npm run typecheck` - Type check with TypeScript
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Run ESLint with automatic fixes
+- `npm run clean` - Remove build artifacts (`dist/` and `.next/`)
+
+### Production
+- `npm run start` - Start production server (for SSR mode, not used in static export)
+
+### AI Development
+- `npm run genkit:dev` - Start Genkit AI development server
+- `npm run genkit:watch` - Start Genkit AI development server with watch mode
 
 ## 🌐 Deployment
 
-This project is configured for static export and can be deployed to any static hosting provider:
+This project uses Azure Static Web Apps with automated GitHub Actions deployment:
+
+### 🔄 CI/CD Pipeline
+
+The deployment pipeline runs on every push to `main` and pull request:
+
+1. **Quality Checks** (runs first):
+   - TypeScript type checking
+   - ESLint code quality
+   - Test build validation
+
+2. **Build & Deploy** (runs after quality checks pass):
+   - Installs dependencies with caching
+   - Builds static export to `dist/` directory
+   - Deploys to Azure Static Web Apps
+   - Creates preview environments for PRs
+
+### 🚀 Manual Deployment
+
+To deploy manually or to other hosting providers:
 
 1. Build the project:
 ```bash
 npm run build
 ```
 
-2. The static files will be generated in the `out/` directory.
+2. The static files will be generated in the `dist/` directory.
 
-3. Deploy the `out/` folder to your hosting provider.
+3. Deploy the `dist/` folder to your hosting provider.
 
-### Recommended Hosts
-- **Vercel**: Native Next.js support
-- **Netlify**: Static site hosting
-- **SiteGround**: Traditional web hosting
+### 🏠 Hosting Options
+
+- **Azure Static Web Apps** (current): Automatic deployment with PR previews
+- **Vercel**: Native Next.js support with GitHub integration
+- **Netlify**: Static site hosting with branch deploys
+- **GitHub Pages**: Free hosting for public repositories
+- **Traditional Web Hosting**: Upload `dist/` folder contents
 
 ## 🔧 Configuration
 
@@ -147,11 +182,25 @@ npm run build
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
+## 📚 Documentation
+
+### Technical Documentation
+- **[Deployment Guide](docs/deployment.md)**: Comprehensive CI/CD and deployment documentation
+- **[GitHub Setup Guide](docs/github-setup.md)**: Repository configuration and team collaboration setup
+- **[Blueprint](docs/blueprint.md)**: Original design and feature specifications
+
+### Quick Links
+- [Development Setup](#-getting-started): Getting started with local development
+- [Available Scripts](#-available-scripts): All npm commands and their usage
+- [Deployment](#-deployment): CI/CD pipeline and hosting information
+- [Configuration](#-configuration): Site and styling configuration
+
 ## 📞 Support
 
 For technical issues or questions about this application:
 
 - **Project Repository**: [github.com/github-chriso/voicesofdrought](https://github.com/github-chriso/voicesofdrought)
+- **Technical Documentation**: See [docs/](docs/) folder for detailed guides
 - **Lifeline Central West**: [lifelinecentralwest.org.au](https://lifelinecentralwest.org.au)
 
 For crisis support:

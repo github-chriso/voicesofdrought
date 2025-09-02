@@ -3,6 +3,10 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   // Produce a fully static site for hosting flexibility
   output: 'export',
+  
+  // Use 'dist' directory for clearer build output naming
+  distDir: 'dist',
+  
   // Ensure clean static URLs that map to folder index.html on static hosts
   trailingSlash: true,
 
@@ -13,6 +17,7 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: false,
   },
+  
   // Image configuration for static export
   images: {
     unoptimized: true,
@@ -31,6 +36,11 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  
+  // Security and performance optimizations
+  poweredByHeader: false,
+  compress: true,
+  
   // Note: Security headers would be configured via hosting provider
   // since static export doesn't support Next.js headers function
 };

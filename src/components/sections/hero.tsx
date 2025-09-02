@@ -65,38 +65,43 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-dvh min-h-[600px] flex items-end md:items-center pb-16 md:pb-0 text-primary-foreground overflow-hidden">
+    <section className="relative h-dvh min-h-[600px] flex items-end pb-24 md:pb-32 lg:pb-40 text-primary-foreground overflow-hidden">
       <div className="absolute inset-0 -z-20 will-change-transform transition-transform" id="hero-bg" suppressHydrationWarning>
         <Image
           src="/hero.webp"
-          alt="Sunset over a rural windmill in Central West NSW."
-          data-ai-hint="rural sunset"
+          alt="Voices of Drought hero image featuring Central West NSW landscape with Lifeline Central West branding."
+          data-ai-hint="drought landscape with logo"
           fill
-          className="object-cover"
+          className="object-cover object-[center_20%]"
           priority
+          sizes="100vw"
         />
       </div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-midnight-navy/70 via-midnight-navy/30 to-transparent"></div>
+      {/* Stronger overlay at bottom for text readability */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
       <div className="container grid grid-cols-1">
-        <div className="max-w-3xl text-left self-end">
-          <p className="uppercase tracking-widest text-sm text-white/70 mb-3">Lifeline Central West</p>
-          <h1 ref={headlineRef} className="font-headline text-4xl sm:text-5xl md:text-6xl font-extrabold !leading-[1.05]">
-            {animatedHeadline}
-          </h1>
-          <h2 ref={subheadRef} className="font-headline mt-4 text-xl md:text-2xl font-semibold opacity-90">
-            Community Conversations & Survey
-          </h2>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <Button asChild size="lg" className="bg-lifeline-blue text-white hover:bg-lifeline-blue/90">
-              <Link href={siteConfig.urls.qualtricsSurvey} target="_blank" rel="noopener" data-event="cta_survey_click">
-                Take the Survey <ArrowRight className="ml-2" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="accent" className="bg-sunshine-orange text-ink hover:bg-sunshine-orange/90">
-              <Link href={siteConfig.urls.humanitixRegister} target="_blank" rel="noopener" data-event="cta_register_click">
-                Join a Conversation <ArrowRight className="ml-2" />
-              </Link>
-            </Button>
+        <div className="max-w-sm sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl text-left">
+          {/* Darker text backdrop for better readability */}
+          <div className="bg-black/60 backdrop-blur-md rounded-lg p-4 sm:p-6 md:p-8 border border-white/10">
+            <p className="uppercase tracking-widest text-xs sm:text-sm text-white/90 mb-3">Lifeline Central West</p>
+            <h1 ref={headlineRef} className="font-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold !leading-[1.05] text-white">
+              {animatedHeadline}
+            </h1>
+            <h2 ref={subheadRef} className="font-headline mt-3 sm:mt-4 text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white">
+              Community Conversations & Survey
+            </h2>
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button asChild size="lg" className="bg-lifeline-blue text-white hover:bg-lifeline-blue/90 font-semibold text-sm sm:text-base">
+                <Link href={siteConfig.urls.qualtricsSurvey} target="_blank" rel="noopener" data-event="cta_survey_click">
+                  Take the Survey <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="accent" className="bg-sunshine-orange text-ink hover:bg-sunshine-orange/90 font-semibold text-sm sm:text-base">
+                <Link href={siteConfig.urls.humanitixRegister} target="_blank" rel="noopener" data-event="cta_register_click">
+                  Join a Conversation <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
         {/* Unicorn Studio interactive background placeholder */}

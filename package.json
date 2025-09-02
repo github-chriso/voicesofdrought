@@ -4,13 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -p 9002",
-    "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
-    "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
     "build": "next build",
-    "export": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "lint:fix": "next lint --fix",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .next",
+    "preview": "npm run build && npx serve dist",
+    "quality": "npm run typecheck && npm run lint && npm run build",
+    "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
+    "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts"
   },
   "dependencies": {
     "@genkit-ai/googleai": "^1.14.1",

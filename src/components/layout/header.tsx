@@ -49,10 +49,10 @@ export function Header() {
             </div>
           </Link>
           
-          <div className="flex items-center gap-4 lg:gap-6 xl:gap-8">
-            {/* Block 2: Empty Space / CTAs when scrolled - Hidden on mobile where bottom bar shows */}
+          <div className="flex items-center gap-2 lg:gap-4 xl:gap-6 2xl:gap-8">
+            {/* Block 2: CTAs when scrolled - Only on very large screens */}
             <div className={cn(
-              "hidden xl:flex items-center gap-2 transition-all duration-300 min-w-[240px]",
+              "hidden 2xl:flex items-center gap-2 transition-all duration-300 min-w-[240px]",
               isScrolled ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
             )}>
               <Button asChild size="sm" className="bg-lifeline-blue text-white hover:bg-lifeline-blue/90">
@@ -67,40 +67,84 @@ export function Header() {
               </Button>
             </div>
             
-            {/* Block 3: Emergency */}
-            <div className="hidden lg:flex flex-col items-start text-sm">
-              <span className="font-semibold text-primary text-sm">If life in danger call</span>
-              <a href={`tel:${siteConfig.contacts.emergency}`} className="font-semibold text-primary hover:underline text-sm">
-                Triple Zero {siteConfig.contacts.emergency}
-              </a>
-            </div>
-            
-            {/* Block 4: Crisis Line */}
-            <div className="hidden lg:flex flex-col items-start text-sm">
-              <a href={`tel:${siteConfig.contacts.crisisLine}`} className="font-semibold text-primary hover:underline flex items-center gap-1">
-                Call {siteConfig.contacts.crisisLine} <ArrowRight className="w-3 h-3 text-orange-500" />
-              </a>
-              <span className="text-xs text-green-600">24/7 Crisis Support</span>
-            </div>
-            
-            {/* Block 5: Online Services */}
-            <div className="hidden lg:flex items-center gap-6">
-              <div className="flex flex-col items-start text-sm">
-                <Link href={siteConfig.urls.crisisText} target="_blank" rel="noopener" className="font-semibold text-primary hover:underline flex items-center gap-1">
-                  Text us <ArrowRight className="w-3 h-3 text-orange-500" />
-                </Link>
-                <span className="text-xs text-green-600">Online</span>
+            {/* Extra Large Screens (1536px+) - Full detailed layout */}
+            <div className="hidden 2xl:flex items-center gap-6">
+              <div className="flex flex-col items-end text-sm whitespace-nowrap">
+                <span className="font-semibold text-primary text-sm">If life in danger call</span>
+                <a href={`tel:${siteConfig.contacts.emergency}`} className="font-semibold text-primary hover:underline text-sm">
+                  Triple Zero {siteConfig.contacts.emergency}
+                </a>
               </div>
-              <div className="flex flex-col items-start text-sm">
-                <Link href={siteConfig.urls.crisiChat} target="_blank" rel="noopener" className="font-semibold text-primary hover:underline flex items-center gap-1">
-                  Chat with us <ArrowRight className="w-3 h-3 text-orange-500" />
-                </Link>
-                <span className="text-xs text-green-600">Online</span>
+              <div className="flex flex-col items-end text-sm whitespace-nowrap">
+                <a href={`tel:${siteConfig.contacts.crisisLine}`} className="font-semibold text-primary hover:underline flex items-center gap-1">
+                  Call {siteConfig.contacts.crisisLine} <ArrowRight className="w-3 h-3 text-orange-500" />
+                </a>
+                <span className="text-xs text-green-600">24/7 Crisis Support</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="flex flex-col items-end text-sm whitespace-nowrap">
+                  <Link href={siteConfig.urls.crisisText} target="_blank" rel="noopener" className="font-semibold text-primary hover:underline flex items-center gap-1">
+                    Text us <ArrowRight className="w-3 h-3 text-orange-500" />
+                  </Link>
+                  <span className="text-xs text-green-600">Online</span>
+                </div>
+                <div className="flex flex-col items-end text-sm whitespace-nowrap">
+                  <Link href={siteConfig.urls.crisiChat} target="_blank" rel="noopener" className="font-semibold text-primary hover:underline flex items-center gap-1">
+                    Chat with us <ArrowRight className="w-3 h-3 text-orange-500" />
+                  </Link>
+                  <span className="text-xs text-green-600">Online</span>
+                </div>
               </div>
             </div>
 
-            {/* Mobile emergency/crisis slide-over */}
-            <div className="lg:hidden">
+            {/* XL Screens (1280px-1535px) - Compact detailed layout */}
+            <div className="hidden xl:flex 2xl:hidden items-center gap-4">
+              <div className="flex flex-col items-end text-xs whitespace-nowrap">
+                <span className="font-semibold text-primary">If life in danger call</span>
+                <a href={`tel:${siteConfig.contacts.emergency}`} className="font-semibold text-primary hover:underline">
+                  Triple Zero {siteConfig.contacts.emergency}
+                </a>
+              </div>
+              <div className="flex flex-col items-end text-xs whitespace-nowrap">
+                <a href={`tel:${siteConfig.contacts.crisisLine}`} className="font-semibold text-primary hover:underline flex items-center gap-1">
+                  Call {siteConfig.contacts.crisisLine} <ArrowRight className="w-3 h-3 text-orange-500" />
+                </a>
+                <span className="text-xs text-green-600">24/7 Crisis Support</span>
+              </div>
+              <div className="flex flex-col items-end text-xs whitespace-nowrap">
+                <Link href={siteConfig.urls.crisisText} target="_blank" rel="noopener" className="font-semibold text-primary hover:underline">
+                  Text us
+                </Link>
+              </div>
+              <div className="flex flex-col items-end text-xs whitespace-nowrap">
+                <Link href={siteConfig.urls.crisiChat} target="_blank" rel="noopener" className="font-semibold text-primary hover:underline">
+                  Chat with us
+                </Link>
+              </div>
+            </div>
+
+            {/* Large Screens (1024px-1279px) - Simplified inline format */}
+            <div className="hidden lg:flex xl:hidden items-center gap-4">
+              <a href={`tel:${siteConfig.contacts.emergency}`} className="font-semibold text-primary hover:underline text-sm whitespace-nowrap">
+                Emergency: {siteConfig.contacts.emergency}
+              </a>
+              <a href={`tel:${siteConfig.contacts.crisisLine}`} className="font-semibold text-primary hover:underline text-sm whitespace-nowrap">
+                Crisis: {siteConfig.contacts.crisisLine}
+              </a>
+            </div>
+
+            {/* Medium Screens (768px-1023px) - Ultra compact */}
+            <div className="hidden md:flex lg:hidden items-center gap-3">
+              <a href={`tel:${siteConfig.contacts.emergency}`} className="font-semibold text-primary hover:underline text-xs">
+                000
+              </a>
+              <a href={`tel:${siteConfig.contacts.crisisLine}`} className="font-semibold text-primary hover:underline text-xs">
+                13 11 14
+              </a>
+            </div>
+
+            {/* Mobile (under 768px) - Emergency button with sheet */}
+            <div className="md:hidden">
               <Sheet>
                 <SheetTrigger asChild>
                   <Button variant="outline" size="sm" aria-label="Emergency and crisis options">Emergency</Button>
