@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useMemo, useRef } from "react";
@@ -67,15 +66,16 @@ export function Hero() {
   return (
     <section className="relative h-dvh min-h-[600px] flex items-end pb-24 md:pb-32 lg:pb-40 text-primary-foreground overflow-hidden">
       <div className="absolute inset-0 -z-20 will-change-transform transition-transform" id="hero-bg" suppressHydrationWarning>
-        <Image
-          src="/hero.jpg"
-          alt="Voices of Drought hero image featuring Central West NSW landscape with Lifeline Central West branding."
-          data-ai-hint="drought landscape with logo"
-          fill
-          className="object-cover object-[center_20%]"
-          priority
-          sizes="100vw"
-        />
+        <picture>
+          <source srcSet="/hero.webp" type="image/webp" />
+          <img
+            src="/hero.jpg"
+            alt="Voices of Drought hero image featuring Central West NSW landscape with Lifeline Central West branding."
+            data-ai-hint="drought landscape with logo"
+            className="absolute inset-0 w-full h-full object-cover object-[center_20%]"
+            loading="eager"
+          />
+        </picture>
       </div>
       {/* Stronger overlay at bottom for text readability */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
