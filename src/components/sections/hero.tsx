@@ -74,18 +74,18 @@ export function Hero() {
       </div>
 
       {/* Simplified bottom bar with buttons */}
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-lifeline-blue/80 via-lifeline-blue/70 to-lifeline-blue/80 backdrop-blur-md py-6">
+      <div className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-md py-6">
         <div className="text-center">
           <p className="text-white/90 text-sm md:text-base font-medium mb-4">
             You've lived it — now help us plan for the next drought.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button asChild size="lg" className="bg-white text-lifeline-blue border-2 border-lifeline-blue hover:shadow-lg hover:shadow-lifeline-blue/20 active:bg-lifeline-blue/5 font-semibold text-lg px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
+            <Button asChild size="lg" className="bg-white text-gray-700 border-2 border-gray-700 hover:shadow-lg hover:shadow-gray-700/20 active:bg-gray-50 font-semibold text-lg px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
               <Link href={siteConfig.urls.qualtricsSurvey} target="_blank" rel="noopener" data-event="cta_survey_click">
                 Take the Survey <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" className="bg-white text-lifeline-blue border-2 border-lifeline-blue hover:shadow-lg hover:shadow-lifeline-blue/20 active:bg-lifeline-blue/5 font-semibold text-lg px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
+            <Button asChild size="lg" className="bg-white text-gray-700 border-2 border-gray-700 hover:shadow-lg hover:shadow-gray-700/20 active:bg-gray-50 font-semibold text-lg px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
               <Link href={siteConfig.urls.humanitixRegister} target="_blank" rel="noopener" data-event="cta_register_click">
                 Join a Conversation <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -94,18 +94,18 @@ export function Hero() {
         </div>
       </div>
       {/* Always Visible Sticky Bottom Bar */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-lifeline-blue/80 via-lifeline-blue/70 to-lifeline-blue/80 backdrop-blur-md py-4 sm:py-6 z-50">
+      <div className="fixed bottom-0 left-0 right-0 bg-gray-800/90 backdrop-blur-md py-4 sm:py-6 z-50">
         <div className="text-center">
           <p className="text-white/90 text-sm md:text-base font-medium mb-4">
             You've lived it — now help us plan for the next drought.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
-            <Button asChild size="lg" className="bg-white text-lifeline-blue border-2 border-lifeline-blue hover:shadow-lg hover:shadow-lifeline-blue/20 active:bg-lifeline-blue/5 font-semibold text-lg px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
+            <Button asChild size="lg" className="bg-white text-gray-700 border-2 border-gray-700 hover:shadow-lg hover:shadow-gray-700/20 active:bg-gray-50 font-semibold text-lg px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
               <Link href={siteConfig.urls.qualtricsSurvey} target="_blank" rel="noopener" data-event="cta_survey_click">
                 Take the Survey <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" className="bg-white text-lifeline-blue border-2 border-lifeline-blue hover:shadow-lg hover:shadow-lifeline-blue/20 active:bg-lifeline-blue/5 font-semibold text-lg px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
+            <Button asChild size="lg" className="bg-white text-gray-700 border-2 border-gray-700 hover:shadow-lg hover:shadow-gray-700/20 active:bg-gray-50 font-semibold text-lg px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
               <Link href={siteConfig.urls.humanitixRegister} target="_blank" rel="noopener" data-event="cta_register_click">
                 Join a Conversation <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
