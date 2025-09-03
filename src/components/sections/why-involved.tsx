@@ -85,7 +85,7 @@ export function WhyInvolved() {
             >
               <CardHeader className="p-10">
                 <div className="flex justify-center mb-8">
-                  <div className="p-4 bg-sky-blue/10 rounded-full">
+                  <div className="p-4 bg-lifeline-blue/10 rounded-full">
                     {feature.icon}
                   </div>
                 </div>

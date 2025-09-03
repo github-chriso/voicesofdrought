@@ -3,7 +3,7 @@ import { Mail, Phone } from "lucide-react";
 
 export function FooterCallout() {
   return (
-    <footer id="contact" className="bg-midnight-navy text-primary-foreground">
+    <footer id="contact" className="bg-lifeline-blue text-primary-foreground">
       <div className="container py-12 text-center">
         <h2 className="font-headline text-2xl md:text-3xl font-bold">
           Questions or need help?

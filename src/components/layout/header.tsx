@@ -60,7 +60,7 @@ export function Header() {
                   Take the Survey <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="sm" variant="accent" className="bg-sunshine-orange text-ink hover:bg-sunshine-orange/90">
+              <Button asChild size="sm" className="bg-lifeline-blue/80 text-white hover:bg-lifeline-blue/70">
                 <Link href={siteConfig.urls.humanitixRegister} target="_blank" rel="noopener">
                   Join a Conversation <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

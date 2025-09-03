@@ -11,7 +11,7 @@ import SectionTitle from "@/components/ui/section-title";
 
 export function Faq() {
   return (
-    <section className="py-16 sm:py-24 bg-sky-blue/20">
+    <section className="py-16 sm:py-24 bg-lifeline-blue/10">
       <div className="container max-w-4xl">
         <div className="text-center">
           <SectionTitle>Frequently Asked Questions</SectionTitle>
