@@ -13,22 +13,31 @@ gsap.registerPlugin(ScrollTrigger);
 const features = [
   {
     icon: <UserCheck className="h-12 w-12 text-lifeline-blue" />,
-    title: "Share Your Story, Shape Our Future",
-    description: "Your unique drought experience and insights will guide future local programs and services built specifically for rural life—not copied from the city.",
-    details: "Join 8–12 locals in relaxed, open discussions tailored to your area. Your voice matters in shaping support that truly works for our communities.",
+    title: "Share Your Story",
+    points: [
+      "Your drought experience guides local programs",
+      "Built specifically for rural life",
+      "Not copied from city solutions"
+    ],
   },
   {
     icon: <ShieldCheck className="h-12 w-12 text-lifeline-blue" />,
     title: "Safe & Confidential",
-    description: "Sessions are audio-recorded but all comments are de-identified to protect your privacy. Your information is securely stored and only accessed by authorized, trauma-informed Lifeline staff.",
-    details: "We create a safe space where you can speak openly about your experiences, knowing your privacy is protected.",
+    points: [
+      "Sessions are recorded but de-identified",
+      "Only authorized Lifeline staff access information",
+      "Your privacy is protected"
+    ],
     hasPrivacyLink: true,
   },
   {
     icon: <Gift className="h-12 w-12 text-lifeline-blue" />,
     title: "Quick & Rewarding",
-    description: "Just 90 minutes of your time can make a lasting difference. Sessions are free to attend with light refreshments provided.",
-    details: "Plus, every participant enters the draw for 1 of 5 × $100 gift cards. Transport support is available on request to ensure everyone can participate. Your contribution is valued and appreciated.",
+    points: [
+      "90 minutes of your time",
+      "Free sessions with refreshments",
+      "Enter to win 1 of 5 × $100 gift cards"
+    ],
   },
 ];
 
@@ -83,28 +92,32 @@ export function WhyInvolved() {
               data-why-card
               className="text-center border-2 border-gray-100 shadow-lg transition-all duration-300 will-change-transform hover:-translate-y-2 hover:shadow-xl hover:border-lifeline-blue/20 focus-within:-translate-y-2 focus-within:shadow-xl focus-within:border-lifeline-blue/20"
             >
-              <CardHeader className="p-10">
-                <div className="flex justify-center mb-8">
+              <CardHeader className="p-8">
+                <div className="flex justify-center mb-6">
                   <div className="p-4 bg-lifeline-blue/10 rounded-full">
                     {feature.icon}
                   </div>
                 </div>
-                <CardTitle className="font-headline text-2xl mb-6 text-ink leading-tight">
+                <CardTitle className="font-headline text-xl mb-4 text-ink leading-tight">
                   {feature.title}
                 </CardTitle>
-                <CardDescription className="text-base leading-relaxed mb-4 text-gray-600">
-                  {feature.description}
-                </CardDescription>
-                <CardDescription className="text-sm leading-relaxed text-gray-500">
-                  {feature.details}
-                </CardDescription>
+                <div className="text-left space-y-2">
+                  {feature.points.map((point, pointIndex) => (
+                    <div key={pointIndex} className="flex items-start">
+                      <span className="text-lifeline-blue mr-3 mt-1">•</span>
+                      <p className="text-sm text-gray-600 leading-relaxed flex-1">
+                        {point}
+                      </p>
+                    </div>
+                  ))}
+                </div>
                 {feature.hasPrivacyLink && (
                   <div className="mt-6 pt-4 border-t border-gray-100">
                     <Link 
                       href="https://lifelinecentralwest.org.au/wp-content/uploads/2025/03/RCS_-Privacy-Policy-2025-v2.0.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-sm text-lifeline-blue hover:text-lifeline-blue/80 font-medium transition-colors"
+                      className="inline-flex items-center gap-2 text-xs text-lifeline-blue hover:text-lifeline-blue/80 font-medium transition-colors"
                     >
                       Learn more about our privacy policy
                       <ExternalLink className="h-3 w-3" />

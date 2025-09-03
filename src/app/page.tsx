@@ -23,8 +23,6 @@ export default function Home() {
         <ParticipationSplit />
       </main>
       <FooterCallout />
-      <div className="h-32"></div>
-
     </div>
   );
 }
