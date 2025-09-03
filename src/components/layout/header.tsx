@@ -28,7 +28,7 @@ export function Header() {
   return (
           <header className={cn(
         // Keep the nav pinned and on top across browsers
-        "fixed top-0 left-0 right-0 z-[100] bg-white/10 backdrop-blur-xl border-b border-white/20 pt-safe",
+        "fixed top-0 left-0 right-0 z-[100] bg-white/95 backdrop-blur-xl border-b border-gray-200/50 pt-safe shadow-sm",
         // Reduce repaint jank on Safari when scrolling with blurred backgrounds
         "will-change-transform transition-shadow duration-300",
         isScrolled && "shadow-md"

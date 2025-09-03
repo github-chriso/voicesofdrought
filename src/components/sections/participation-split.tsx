@@ -10,7 +10,7 @@ export function ParticipationSplit() {
     <section className="py-16 sm:py-24 bg-gradient-to-b from-gray-50/50 to-white/30">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-          <Card className="bg-white/40 backdrop-blur-xl border border-white/30 text-gray-800 shadow-2xl overflow-hidden">
+          <Card className="bg-white/95 backdrop-blur-xl border border-gray-200/30 text-gray-900 shadow-2xl overflow-hidden">
             <CardContent className="p-8 grid gap-6 md:grid-cols-2 items-center">
               <div className="space-y-4">
                 <h3 className="font-headline text-2xl md:text-3xl font-bold">
@@ -19,7 +19,7 @@ export function ParticipationSplit() {
                 <p className="opacity-90">
                   10–15 minutes, mobile-friendly. Skip any question. Your answers are anonymous.
                 </p>
-                <Button asChild size="lg" className="bg-white/60 backdrop-blur-md text-gray-800 border border-white/40 hover:bg-white/80 active:bg-white/90 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 shadow-lg">
+                <Button asChild size="lg" className="bg-gray-900 text-white border border-gray-700 hover:bg-gray-800 active:bg-gray-950 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 shadow-lg">
                   <Link href={siteConfig.urls.qualtricsSurvey} target="_blank" rel="noopener" data-event="cta_survey_click">
                     Take the Survey <ArrowRight className="ml-2" />
                   </Link>
@@ -38,7 +38,7 @@ export function ParticipationSplit() {
             </CardContent>
           </Card>
 
-          <Card className="bg-white/40 backdrop-blur-xl border border-white/30 text-gray-800 shadow-2xl overflow-hidden">
+          <Card className="bg-white/95 backdrop-blur-xl border border-gray-200/30 text-gray-900 shadow-2xl overflow-hidden">
              <CardContent className="p-8 grid gap-6 md:grid-cols-2 items-center">
                 <div className="space-y-4">
                     <h3 className="font-headline text-2xl md:text-3xl font-bold">

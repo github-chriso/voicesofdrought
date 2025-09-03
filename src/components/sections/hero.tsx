@@ -74,19 +74,19 @@ export function Hero() {
       </div>
 
 
-      {/* Apple Glass Sticky CTA Bar */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white/10 backdrop-blur-xl border-t border-white/20 py-4 sm:py-5 z-50">
+      {/* High Contrast Sticky CTA Bar */}
+      <div className="fixed bottom-0 left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50 py-4 sm:py-5 z-50 shadow-2xl">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-white/90 text-sm md:text-base font-medium mb-4 drop-shadow-lg">
+          <p className="text-gray-100 text-sm md:text-base font-medium mb-4">
             You've lived it — now help us plan for the next drought.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto">
-            <Button asChild size="lg" className="bg-white/20 backdrop-blur-md text-white border border-white/30 hover:bg-white/30 active:bg-white/40 font-medium text-base px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 w-full sm:w-auto">
+            <Button asChild size="lg" className="bg-white text-gray-900 border border-gray-200 hover:bg-gray-50 hover:border-gray-300 active:bg-gray-100 font-semibold text-base px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 w-full sm:w-auto">
               <Link href={siteConfig.urls.qualtricsSurvey} target="_blank" rel="noopener" data-event="cta_survey_click">
                 Take the Survey <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
-            <Button asChild size="lg" className="bg-white/20 backdrop-blur-md text-white border border-white/30 hover:bg-white/30 active:bg-white/40 font-medium text-base px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 w-full sm:w-auto">
+            <Button asChild size="lg" className="bg-gray-100 text-gray-900 border border-gray-300 hover:bg-white hover:border-gray-400 active:bg-gray-50 font-semibold text-base px-6 py-3 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-0.5 w-full sm:w-auto">
               <Link href={siteConfig.urls.humanitixRegister} target="_blank" rel="noopener" data-event="cta_register_click">
                 Join a Conversation <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
