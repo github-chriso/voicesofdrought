@@ -10,7 +10,7 @@ export function ParticipationSplit() {
     <section className="py-16 sm:py-24 bg-sky-blue/20">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-8 items-stretch">
-          <Card className="bg-lifeline-blue text-primary-foreground border-none overflow-hidden">
+          <Card className="bg-gray-700 text-white border-none overflow-hidden">
             <CardContent className="p-8 grid gap-6 md:grid-cols-2 items-center">
               <div className="space-y-4">
                 <h3 className="font-headline text-2xl md:text-3xl font-bold">
@@ -19,7 +19,7 @@ export function ParticipationSplit() {
                 <p className="opacity-90">
                   10–15 minutes, mobile-friendly. Skip any question. Your answers are anonymous.
                 </p>
-                <Button asChild size="lg" variant="secondary" className="bg-white text-lifeline-blue hover:bg-white/90">
+                <Button asChild size="lg" className="bg-white text-gray-700 border-2 border-gray-700 hover:shadow-lg hover:shadow-gray-700/20 active:bg-gray-50 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
                   <Link href={siteConfig.urls.qualtricsSurvey} target="_blank" rel="noopener" data-event="cta_survey_click">
                     Take the Survey <ArrowRight className="ml-2" />
                   </Link>
@@ -38,7 +38,7 @@ export function ParticipationSplit() {
             </CardContent>
           </Card>
 
-          <Card className="bg-sunshine-orange text-ink border-none overflow-hidden">
+          <Card className="bg-gray-600 text-white border-none overflow-hidden">
              <CardContent className="p-8 grid gap-6 md:grid-cols-2 items-center">
                 <div className="space-y-4">
                     <h3 className="font-headline text-2xl md:text-3xl font-bold">
@@ -47,7 +47,7 @@ export function ParticipationSplit() {
                     <p className="opacity-90">
                     Free 90-minute session with 8–12 locals in your LGA. Light refreshments.
                     </p>
-                    <Button asChild size="lg" className="bg-white text-sunshine-orange hover:bg-white/90">
+                    <Button asChild size="lg" className="bg-white text-gray-600 border-2 border-gray-600 hover:shadow-lg hover:shadow-gray-600/20 active:bg-gray-50 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
                       <Link href={siteConfig.urls.humanitixRegister} target="_blank" rel="noopener" data-event="cta_register_click">
                           Join a Conversation <ArrowRight className="ml-2" />
                       </Link>

@@ -5,10 +5,10 @@ import { Locations } from "@/components/sections/locations";
 import { PartnerStrip } from "@/components/sections/partner-strip";
 import { ParticipationSplit } from "@/components/sections/participation-split";
 
-import { ValuePropRibbon } from "@/components/sections/value-prop-ribbon";
+
 import { WhyInvolved } from "@/components/sections/why-involved";
 import { FooterCallout } from "@/components/layout/footer-callout";
-import { MobileCtaBar } from "@/components/layout/mobile-cta-bar";
+
 
 export default function Home() {
   return (
@@ -16,7 +16,6 @@ export default function Home() {
       <Header />
       <main id="main-content" className="flex-grow pt-20">
         <Hero />
-        <ValuePropRibbon />
         <WhyInvolved />
         <PartnerStrip />
         <Locations />
@@ -24,7 +23,8 @@ export default function Home() {
         <ParticipationSplit />
       </main>
       <FooterCallout />
-      <MobileCtaBar />
+      <div className="h-32"></div>
+
     </div>
   );
 }
