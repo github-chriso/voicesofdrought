@@ -43,6 +43,7 @@ export function Header() {
                 alt="Lifeline Central West"
                 width={280}
                 height={70}
+                sizes="(min-width: 1024px) 260px, (min-width: 640px) 240px, 200px"
                 className="h-14 w-auto"
                 priority
               />
