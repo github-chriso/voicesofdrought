@@ -28,7 +28,7 @@ export function Header() {
   return (
           <header className={cn(
         // Keep the nav pinned and on top across browsers
-        "fixed top-0 left-0 right-0 z-[100] bg-background/80 backdrop-blur-sm supports-[backdrop-filter]:bg-background/70 pt-safe",
+        "fixed top-0 left-0 right-0 z-[100] bg-white border-b border-gray-200 shadow-sm pt-safe",
         // Reduce repaint jank on Safari when scrolling with blurred backgrounds
         "will-change-transform transition-shadow duration-300",
         isScrolled && "shadow-md"
@@ -39,7 +39,7 @@ export function Header() {
           <Link href="/" className="flex items-center">
             <div suppressHydrationWarning className="min-w-[200px] sm:min-w-[240px] md:min-w-[240px] lg:min-w-[260px]">
               <Image
-                src="/logo.png"
+                src="/logo-new.webp"
                 alt="Lifeline Central West"
                 width={280}
                 height={70}
@@ -60,7 +60,7 @@ export function Header() {
                   Take the Survey <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="sm" variant="accent" className="bg-sunshine-orange text-ink hover:bg-sunshine-orange/90">
+              <Button asChild size="sm" className="bg-lifeline-blue/80 text-white hover:bg-lifeline-blue/70">
                 <Link href={siteConfig.urls.humanitixRegister} target="_blank" rel="noopener">
                   Join a Conversation <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
