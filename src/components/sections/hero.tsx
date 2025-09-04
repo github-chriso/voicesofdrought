@@ -37,18 +37,18 @@ export function Hero() {
       <div className="absolute inset-0 -z-20 overflow-hidden" id="hero-bg">
         <div className="flex h-full" id="hero-carousel" style={{ width: '200vw' }}>
           <picture className="w-screen h-full flex-shrink-0">
-            <source srcSet="/hero-new.webp" type="image/webp" />
+            <source srcSet="/heroImage.webp" type="image/webp" />
             <img
-              src="/hero-new.jpg"
+              src="/heroImage.webp"
               alt="Central West NSW drought landscape showing different stages from green to dry"
               className="w-full h-full object-cover will-change-transform"
               loading="eager"
             />
           </picture>
           <picture className="w-screen h-full flex-shrink-0">
-            <source srcSet="/hero-new.webp" type="image/webp" />
+            <source srcSet="/heroImage.webp" type="image/webp" />
             <img
-              src="/hero-new.jpg"
+              src="/heroImage.webp"
               alt="Central West NSW drought landscape showing different stages from green to dry"
               className="w-full h-full object-cover will-change-transform"
               loading="eager"

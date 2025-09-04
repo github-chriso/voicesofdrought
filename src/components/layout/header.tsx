@@ -28,7 +28,7 @@ export function Header() {
   return (
           <header className={cn(
         // Keep the nav pinned and on top across browsers
-        "fixed top-0 left-0 right-0 z-[100] bg-white/95 backdrop-blur-xl border-b border-gray-200/50 pt-safe shadow-sm",
+        "fixed top-0 left-0 right-0 z-[100] bg-white border-b border-gray-200 shadow-sm pt-safe",
         // Reduce repaint jank on Safari when scrolling with blurred backgrounds
         "will-change-transform transition-shadow duration-300",
         isScrolled && "shadow-md"
@@ -39,7 +39,7 @@ export function Header() {
           <Link href="/" className="flex items-center">
             <div suppressHydrationWarning className="min-w-[200px] sm:min-w-[240px] md:min-w-[240px] lg:min-w-[260px]">
               <Image
-                src="/logo.png"
+                src="/logo-new.webp"
                 alt="Lifeline Central West"
                 width={280}
                 height={70}
