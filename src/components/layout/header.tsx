@@ -1,13 +1,10 @@
 
 'use client';
 
-import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Button } from "../ui/button";
 import Image from "next/image";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { HeaderActions } from "@/components/header/header-actions";
 
 export function Header() {
@@ -50,49 +47,8 @@ export function Header() {
             </div>
           </Link>
           
-          <div className="flex items-center gap-2 lg:gap-4 xl:gap-6 2xl:gap-8">
-            
-            {/* Unified Header Actions - Desktop and up */}
-            <div className="hidden md:flex">
-              <HeaderActions />
-            </div>
-
-            {/* Mobile (under 768px) - Emergency button with sheet */}
-            <div className="md:hidden">
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="outline" size="sm" aria-label="Emergency and crisis options">Emergency</Button>
-                </SheetTrigger>
-                <SheetContent side="right" className="w-[320px] sm:w-[380px]">
-                  <SheetHeader>
-                    <SheetTitle>Emergency & Crisis Support</SheetTitle>
-                  </SheetHeader>
-                  <div className="mt-6 space-y-4">
-                    <div>
-                      <p className="text-sm text-muted-foreground">If life is in danger call</p>
-                      <a href={`tel:${siteConfig.contacts.emergency}`} className="text-lg font-semibold text-primary underline-offset-2 hover:underline">
-                        Triple Zero {siteConfig.contacts.emergency}
-                      </a>
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">24/7 Crisis Support</p>
-                      <a href={`tel:${siteConfig.contacts.crisisLine}`} className="text-lg font-semibold text-primary underline-offset-2 hover:underline">
-                        Call {siteConfig.contacts.crisisLine}
-                      </a>
-                    </div>
-                    <div className="grid grid-cols-2 gap-3 pt-2">
-                      <Link href={siteConfig.urls.crisisText} target="_blank" rel="noopener" className="text-center">
-                        <Button className="w-full">Text us</Button>
-                      </Link>
-                      <Link href={siteConfig.urls.crisiChat} target="_blank" rel="noopener" className="text-center">
-                        <Button variant="secondary" className="w-full">Chat</Button>
-                      </Link>
-                    </div>
-                  </div>
-                </SheetContent>
-              </Sheet>
-            </div>
-          </div>
+          {/* Unified Header Actions - All screen sizes */}
+          <HeaderActions />
         </div>
       </div>
     </header>
