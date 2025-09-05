@@ -8,53 +8,34 @@ import { useEffect } from "react";
 
 export function Hero() {
 
-  // Horizontal looping carousel effect
+  // Subtle parallax effect on scroll instead of horizontal carousel
   useEffect(() => {
-    const carousel = document.getElementById("hero-carousel");
-    if (!carousel) return;
-    
-    let position = 0;
-    const speed = 0.01; // Glacially slow horizontal movement
-    
-    const animate = () => {
-      position -= speed;
-      
-      // Reset position when we've scrolled one full image width
-      if (position <= -100) {
-        position = 0;
+    const handleScroll = () => {
+      const scrolled = window.pageYOffset;
+      const heroImg = document.getElementById("hero-image");
+      if (heroImg) {
+        heroImg.style.transform = `translateY(${scrolled * 0.5}px)`;
       }
-      
-      carousel.style.transform = `translateX(${position}vw)`;
-      requestAnimationFrame(animate);
     };
     
-    animate();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <section className="relative h-dvh min-h-[600px] flex flex-col text-primary-foreground overflow-hidden">
-      {/* Single Looping Hero Background */}
-      <div className="absolute inset-0 -z-20 overflow-hidden" id="hero-bg">
-        <div className="flex h-full" id="hero-carousel" style={{ width: '200vw' }}>
-          <picture className="w-screen h-full flex-shrink-0">
-            <source srcSet="/heroImage.webp" type="image/webp" />
-            <img
-              src="/heroImage.webp"
-              alt="Central West NSW drought landscape showing different stages from green to dry"
-              className="w-full h-full object-cover will-change-transform"
-              loading="eager"
-            />
-          </picture>
-          <picture className="w-screen h-full flex-shrink-0">
-            <source srcSet="/heroImage.webp" type="image/webp" />
-            <img
-              src="/heroImage.webp"
-              alt="Central West NSW drought landscape showing different stages from green to dry"
-              className="w-full h-full object-cover will-change-transform"
-              loading="eager"
-            />
-          </picture>
-        </div>
+      {/* Hero Background - Static with subtle parallax */}
+      <div className="absolute inset-0 -z-20 overflow-hidden">
+        <picture className="block w-full h-full">
+          <source srcSet="/heroImage.webp" type="image/webp" />
+          <img
+            id="hero-image"
+            src="/heroImage.webp"
+            alt="Central West NSW drought landscape showing different stages from green to dry"
+            className="w-full h-[120%] object-cover object-[40%_50%] will-change-transform"
+            loading="eager"
+          />
+        </picture>
       </div>
       
       {/* Minimal overlay only behind text areas */}
