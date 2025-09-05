@@ -12,6 +12,20 @@ type SectionTitleProps = {
   className?: string;
 };
 
+/**
+ * An animated section title component that fades in when scrolled into view.
+ * Uses GSAP with ScrollTrigger for smooth animations, with automatic reduced motion support.
+ * 
+ * @param children - The title text content
+ * @param className - Additional CSS classes to apply to the title
+ * 
+ * @example
+ * ```tsx
+ * <SectionTitle className="text-center mb-8">
+ *   Why Get Involved?
+ * </SectionTitle>
+ * ```
+ */
 export function SectionTitle({ children, className }: SectionTitleProps) {
   const ref = useRef<HTMLHeadingElement | null>(null);
 
@@ -51,6 +65,5 @@ export function SectionTitle({ children, className }: SectionTitleProps) {
   );
 }
 
-export default SectionTitle;
 
 

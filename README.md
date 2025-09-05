@@ -27,9 +27,11 @@ src/
 ├── components/            
 │   ├── ui/                # Reusable UI components (Radix-based)
 │   ├── layout/            # Layout components (header, footer)
+│   ├── header/            # Header-specific components
 │   └── sections/          # Page sections (hero, FAQ, etc.)
 ├── lib/                   # Utilities and configurations
-├── config/                # Site configuration
+├── config/                # Site and environment configuration
+├── types/                 # Shared TypeScript interfaces and types
 └── hooks/                 # Custom React hooks
 ```
 

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { ArrowRight, MapPin } from "lucide-react";
 import Link from "next/link";
-import SectionTitle from "@/components/ui/section-title";
+import { SectionTitle } from "@/components/ui/section-title";
 
 export function Locations() {
   return (

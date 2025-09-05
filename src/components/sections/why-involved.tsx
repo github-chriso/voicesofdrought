@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
-import SectionTitle from "@/components/ui/section-title";
+import { SectionTitle } from "@/components/ui/section-title";
 import { Gift, ShieldCheck, UserCheck, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef } from "react";

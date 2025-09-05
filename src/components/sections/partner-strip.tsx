@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import SectionTitle from "@/components/ui/section-title";
+import { SectionTitle } from "@/components/ui/section-title";
 
 const partners = [
   { name: "Orange City Council", logo: "/council_logos_webp_400x160/orange_tp_400x160.webp", hint: "council crest" },

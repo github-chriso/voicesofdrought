@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { HeaderActions } from "@/components/header/header-actions";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,97 +51,10 @@ export function Header() {
           </Link>
           
           <div className="flex items-center gap-2 lg:gap-4 xl:gap-6 2xl:gap-8">
-            {/* Block 2: CTAs when scrolled - Only on very large screens */}
-            <div className={cn(
-              "hidden 2xl:flex items-center gap-2 transition-all duration-300 min-w-[240px]",
-              isScrolled ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
-            )}>
-              <Button asChild size="sm" className="bg-lifeline-blue text-white hover:bg-lifeline-blue/90">
-                <Link href={siteConfig.urls.qualtricsSurvey} target="_blank" rel="noopener">
-                  Take the Survey <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild size="sm" className="bg-lifeline-blue/80 text-white hover:bg-lifeline-blue/70">
-                <Link href={siteConfig.urls.humanitixRegister} target="_blank" rel="noopener">
-                  Join a Conversation <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
             
-            {/* Extra Large Screens (1536px+) - Full detailed layout */}
-            <div className="hidden 2xl:flex items-center gap-6">
-              <div className="flex flex-col items-end text-sm whitespace-nowrap">
-                <span className="font-semibold text-primary text-sm">If life in danger call</span>
-                <a href={`tel:${siteConfig.contacts.emergency}`} className="font-semibold text-primary hover:underline text-sm">
-                  Triple Zero {siteConfig.contacts.emergency}
-                </a>
-              </div>
-              <div className="flex flex-col items-end text-sm whitespace-nowrap">
-                <a href={`tel:${siteConfig.contacts.crisisLine}`} className="font-semibold text-primary hover:underline flex items-center gap-1">
-                  Call {siteConfig.contacts.crisisLine} <ArrowRight className="w-3 h-3 text-orange-500" />
-                </a>
-                <span className="text-xs text-green-600">24/7 Crisis Support</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="flex flex-col items-end text-sm whitespace-nowrap">
-                  <Link href={siteConfig.urls.crisisText} target="_blank" rel="noopener" className="font-semibold text-primary hover:underline flex items-center gap-1">
-                    Text us <ArrowRight className="w-3 h-3 text-orange-500" />
-                  </Link>
-                  <span className="text-xs text-green-600">Online</span>
-                </div>
-                <div className="flex flex-col items-end text-sm whitespace-nowrap">
-                  <Link href={siteConfig.urls.crisiChat} target="_blank" rel="noopener" className="font-semibold text-primary hover:underline flex items-center gap-1">
-                    Chat with us <ArrowRight className="w-3 h-3 text-orange-500" />
-                  </Link>
-                  <span className="text-xs text-green-600">Online</span>
-                </div>
-              </div>
-            </div>
-
-            {/* XL Screens (1280px-1535px) - Compact detailed layout */}
-            <div className="hidden xl:flex 2xl:hidden items-center gap-4">
-              <div className="flex flex-col items-end text-xs whitespace-nowrap">
-                <span className="font-semibold text-primary">If life in danger call</span>
-                <a href={`tel:${siteConfig.contacts.emergency}`} className="font-semibold text-primary hover:underline">
-                  Triple Zero {siteConfig.contacts.emergency}
-                </a>
-              </div>
-              <div className="flex flex-col items-end text-xs whitespace-nowrap">
-                <a href={`tel:${siteConfig.contacts.crisisLine}`} className="font-semibold text-primary hover:underline flex items-center gap-1">
-                  Call {siteConfig.contacts.crisisLine} <ArrowRight className="w-3 h-3 text-orange-500" />
-                </a>
-                <span className="text-xs text-green-600">24/7 Crisis Support</span>
-              </div>
-              <div className="flex flex-col items-end text-xs whitespace-nowrap">
-                <Link href={siteConfig.urls.crisisText} target="_blank" rel="noopener" className="font-semibold text-primary hover:underline">
-                  Text us
-                </Link>
-              </div>
-              <div className="flex flex-col items-end text-xs whitespace-nowrap">
-                <Link href={siteConfig.urls.crisiChat} target="_blank" rel="noopener" className="font-semibold text-primary hover:underline">
-                  Chat with us
-                </Link>
-              </div>
-            </div>
-
-            {/* Large Screens (1024px-1279px) - Simplified inline format */}
-            <div className="hidden lg:flex xl:hidden items-center gap-4">
-              <a href={`tel:${siteConfig.contacts.emergency}`} className="font-semibold text-primary hover:underline text-sm whitespace-nowrap">
-                Emergency: {siteConfig.contacts.emergency}
-              </a>
-              <a href={`tel:${siteConfig.contacts.crisisLine}`} className="font-semibold text-primary hover:underline text-sm whitespace-nowrap">
-                Crisis: {siteConfig.contacts.crisisLine}
-              </a>
-            </div>
-
-            {/* Medium Screens (768px-1023px) - Ultra compact */}
-            <div className="hidden md:flex lg:hidden items-center gap-3">
-              <a href={`tel:${siteConfig.contacts.emergency}`} className="font-semibold text-primary hover:underline text-xs">
-                000
-              </a>
-              <a href={`tel:${siteConfig.contacts.crisisLine}`} className="font-semibold text-primary hover:underline text-xs">
-                13 11 14
-              </a>
+            {/* Unified Header Actions - Desktop and up */}
+            <div className="hidden md:flex">
+              <HeaderActions />
             </div>
 
             {/* Mobile (under 768px) - Emergency button with sheet */}

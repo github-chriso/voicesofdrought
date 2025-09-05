@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { siteConfig } from "@/config/site";
-import SectionTitle from "@/components/ui/section-title";
+import { SectionTitle } from "@/components/ui/section-title";
 
 export function Faq() {
   return (
