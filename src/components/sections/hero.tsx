@@ -78,7 +78,7 @@ export function Hero() {
       <div className="fixed bottom-0 left-0 right-0 bg-lifeline-blue py-4 sm:py-5 z-50 shadow-2xl">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white/95 text-sm md:text-base font-medium mb-4">
-            You've lived it — now help us plan for the next drought.
+            You&apos;ve lived it — now help us plan for the next drought.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto">
             {/* Consistent button styling (Apple-glass inspired) */}
